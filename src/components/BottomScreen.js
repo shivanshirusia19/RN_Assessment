@@ -39,6 +39,41 @@ function BottomScreen() {
           </View>
         </ImageBackground>
       </View>
+
+      <View style={styles.imageContainer}>
+        <ImageBackground
+          style={styles.wallpaer}
+          source={{
+            uri:
+              'https://i.pinimg.com/originals/e6/91/40/e69140ca846f1f3872b05602c83229b3.jpg',
+          }}>
+          <View style={styles.titleView}>
+            <View style={styles.leftSide}>
+              <Text style={styles.title}>Online Doctor Consultation</Text>
+              {/* <Text style={styles.title}>presciption</Text> */}
+              <Text style={styles.text}>
+                Consult with the top medical practitioners in your city. Recover
+                from the comfort of your house
+              </Text>
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert(
+                  'Ad Screen',
+                  'Welcome to Online Doctor Consultation!',
+                  [
+                    {
+                      text: 'OK',
+                      onPress: () => console.log('OK Pressed'),
+                    },
+                  ],
+                );
+              }}>
+              <Text style={styles.filledButton}>CONSULT NOW</Text>
+            </TouchableOpacity>
+          </View>
+        </ImageBackground>
+      </View>
     </View>
   );
 }
@@ -51,7 +86,22 @@ const styles = StyleSheet.create({
     height: 200,
     width: 360,
     margin: 10,
-    paddingHorizontal: 10,
+    paddingLeft: 7,
+    // paddingRight: 10,
+    // borderWidth: 1,
+    // borderRadius: 5,
+    // borderColor: 'white',
+    // shadowColor: 'lightgrey',
+    // shadowOpacity: 0.8,
+    // shadowRadius: 2,
+    // elevation: 4,
+  },
+  wallpaer: {
+    alignItems: 'center',
+    flex: 1,
+    resizeMode: 'cover',
+    height: 200,
+    width: 360,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: 'white',
@@ -59,12 +109,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 4,
-  },
-  wallpaer: {
-    flex: 1,
-    resizeMode: 'cover',
-    height: 200,
-    width: 360,
   },
   titleView: {
     flexDirection: 'row',
@@ -83,18 +127,36 @@ const styles = StyleSheet.create({
     borderColor: 'orange',
     color: 'orange',
     fontSize: 16,
-    paddingHorizontal: 20,
+    textAlign: 'center',
     alignSelf: 'center',
-    paddingVertical: 5,
+    paddingTop: 5,
     marginBottom: 50,
+    marginRight: 10,
+    height: 35,
+    width: 130,
   },
   text: {
-    color: 'darkgrey',
+    color: 'black',
     paddingHorizontal: 15,
     paddingTop: 10,
   },
   leftSide: {
     flex: 1,
+  },
+  filledButton: {
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: 'orange',
+    borderColor: 'orange',
+    color: 'white',
+    fontSize: 16,
+    textAlign: 'center',
+    alignSelf: 'center',
+    paddingTop: 5,
+    marginBottom: 50,
+    marginRight: 10,
+    height: 35,
+    width: 130,
   },
 });
 

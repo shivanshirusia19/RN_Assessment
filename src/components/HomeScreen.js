@@ -94,34 +94,110 @@ export default class HomeScreen extends Component {
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             onScroll={this.change}>
-            <Image
-              source={require('../assets/slideshowImage1.jpeg')}
-              style={styles.images}
-            />
-            <Image
-              source={require('../assets/slideshowImage2.png')}
-              style={styles.images}
-            />
-            <Image
-              source={require('../assets/slideshowImage3.jpeg')}
-              style={styles.images}
-            />
-            <Image
-              source={require('../assets/slideshowImage4.jpeg')}
-              style={styles.images}
-            />
-            <Image
-              source={require('../assets/slideshowImage5.jpeg')}
-              style={styles.images}
-            />
-            <Image
-              source={require('../assets/slideshowImage6.jpeg')}
-              style={styles.images}
-            />
-            <Image
-              source={require('../assets/slideshowImage7.png')}
-              style={styles.images}
-            />
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert('Offer Screen', 'Welcome to Offer!', [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Icon OK Pressed'),
+                  },
+                ]);
+              }}>
+              <Image
+                source={require('../assets/slideshowImage1.jpeg')}
+                style={styles.images}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert('Offer Screen', 'Welcome to Offer!', [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Icon OK Pressed'),
+                  },
+                ]);
+              }}>
+              <Image
+                source={require('../assets/slideshowImage2.png')}
+                style={styles.images}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert('Offer Screen', 'Welcome to Offer!', [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Icon OK Pressed'),
+                  },
+                ]);
+              }}>
+              <Image
+                source={require('../assets/slideshowImage3.jpeg')}
+                style={styles.images}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert('Offer Screen', 'Welcome to Offer!', [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Icon OK Pressed'),
+                  },
+                ]);
+              }}>
+              <Image
+                source={require('../assets/slideshowImage4.jpeg')}
+                style={styles.images}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert('Offer Screen', 'Welcome to Offer!', [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Icon OK Pressed'),
+                  },
+                ]);
+              }}>
+              <Image
+                source={require('../assets/slideshowImage5.jpeg')}
+                style={styles.images}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert('Offer Screen', 'Welcome to Offer!', [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Icon OK Pressed'),
+                  },
+                ]);
+              }}>
+              <Image
+                source={require('../assets/slideshowImage6.jpeg')}
+                style={styles.images}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => {
+                Alert.alert('Offer Screen', 'Welcome to Offer!', [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Icon OK Pressed'),
+                  },
+                ]);
+              }}>
+              <Image
+                source={require('../assets/slideshowImage7.png')}
+                style={styles.images}
+              />
+            </TouchableOpacity>
           </ScrollView>
           <View style={styles.pagination}>
             {imageArray.map((item, index) => (
@@ -209,6 +285,7 @@ export default class HomeScreen extends Component {
         <Packages />
         <MedicineCategories />
         <BottomScreen />
+        <Text />
       </ScrollView>
     );
   }

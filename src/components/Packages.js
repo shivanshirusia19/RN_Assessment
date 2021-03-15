@@ -33,7 +33,7 @@ function Packages() {
             }}>
             <View style={styles.offerCardOdd}>
               <Text style={styles.type}>ADVANCED</Text>
-              <Text style={styles.title}>
+              <Text style={styles.titleDouble}>
                 Zoylo Health Checkup with Iron Studies
               </Text>
               <Text style={styles.testsNumber}>83 tests included</Text>
@@ -66,17 +66,15 @@ function Packages() {
             }}>
             <View style={styles.offerCardEven}>
               <Text style={styles.type}>ADVANCED</Text>
-              <Text style={styles.title}>
-                Zoylo Health Checkup with Iron Studies
-              </Text>
-              <Text style={styles.testsNumber}>83 tests included</Text>
+              <Text style={styles.titleSingle}>FeverPackage 3</Text>
+              <Text style={styles.testsNumber}>66 tests included</Text>
             </View>
             <View style={styles.priceCard}>
-              <Text style={styles.actualPrice}>₹ 3250.00</Text>
+              <Text style={styles.actualPrice}>₹ 3300.00</Text>
               <Text style={styles.dash}>___________</Text>
               <View style={styles.price}>
                 <Text style={styles.discountedPrice}>₹ 1299.00</Text>
-                <Text style={styles.discount}>60% off</Text>
+                <Text style={styles.discount}>61% off</Text>
               </View>
               <Text style={styles.bookText}>BOOK NOW</Text>
             </View>
@@ -99,7 +97,7 @@ function Packages() {
             }}>
             <View style={styles.offerCardOdd}>
               <Text style={styles.type}>ADVANCED</Text>
-              <Text style={styles.title}>
+              <Text style={styles.titleDouble}>
                 Zoylo Health Checkup with Iron Studies
               </Text>
               <Text style={styles.testsNumber}>83 tests included</Text>
@@ -132,7 +130,7 @@ function Packages() {
             }}>
             <View style={styles.offerCardEven}>
               <Text style={styles.type}>ADVANCED</Text>
-              <Text style={styles.title}>
+              <Text style={styles.titleDouble}>
                 Zoylo Health Checkup with Iron Studies
               </Text>
               <Text style={styles.testsNumber}>83 tests included</Text>
@@ -143,6 +141,68 @@ function Packages() {
               <View style={styles.price}>
                 <Text style={styles.discountedPrice}>₹ 1299.00</Text>
                 <Text style={styles.discount}>60% off</Text>
+              </View>
+              <Text style={styles.bookText}>BOOK NOW</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.packageCard}>
+          <TouchableOpacity
+            onPress={() => {
+              Alert.alert(
+                'Package Card Screen',
+                'Welcome to Diagnostic Packages!',
+                [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Package Card OK Pressed'),
+                  },
+                ],
+              );
+            }}>
+            <View style={styles.offerCardEven}>
+              <Text style={styles.type}>ADVANCED</Text>
+              <Text style={styles.titleSingle}>FeverPackage 3</Text>
+              <Text style={styles.testsNumber}>66 tests included</Text>
+            </View>
+            <View style={styles.priceCard}>
+              <Text style={styles.actualPrice}>₹ 3300.00</Text>
+              <Text style={styles.dash}>___________</Text>
+              <View style={styles.price}>
+                <Text style={styles.discountedPrice}>₹ 1299.00</Text>
+                <Text style={styles.discount}>61% off</Text>
+              </View>
+              <Text style={styles.bookText}>BOOK NOW</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.packageCard}>
+          <TouchableOpacity
+            onPress={() => {
+              Alert.alert(
+                'Package Card Screen',
+                'Welcome to Diagnostic Packages!',
+                [
+                  {
+                    text: 'OK',
+                    onPress: () => console.log('Package Card OK Pressed'),
+                  },
+                ],
+              );
+            }}>
+            <View style={styles.offerCardEven}>
+              <Text style={styles.type}>ADVANCED</Text>
+              <Text style={styles.titleSingle}>FeverPackage 3</Text>
+              <Text style={styles.testsNumber}>66 tests included</Text>
+            </View>
+            <View style={styles.priceCard}>
+              <Text style={styles.actualPrice}>₹ 3300.00</Text>
+              <Text style={styles.dash}>___________</Text>
+              <View style={styles.price}>
+                <Text style={styles.discountedPrice}>₹ 1299.00</Text>
+                <Text style={styles.discount}>61% off</Text>
               </View>
               <Text style={styles.bookText}>BOOK NOW</Text>
             </View>
@@ -213,7 +273,14 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     margin: 10,
   },
-  title: {
+  titleSingle: {
+    //alignSelf: 'center',
+    fontSize: 16,
+    fontWeight: '700',
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+  },
+  titleDouble: {
     alignSelf: 'center',
     fontSize: 16,
     fontWeight: '700',
